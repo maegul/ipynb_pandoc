@@ -32,6 +32,14 @@
 	margin: 1em 2em;
 }
 
+.sourceCode.python.error {
+	background: none;
+	border-radius:0px;
+	border:none;
+	border-left: 1px red solid;
+	padding-left: 0.6em;
+}
+
 .output > pre {
 	margin: 0;
 }

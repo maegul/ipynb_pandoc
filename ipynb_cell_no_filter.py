@@ -42,8 +42,8 @@ def cell_no(key, value, format, meta):
             #     '<div class="simple_error">'+trace_message+'</div>'
             # )
 
-            new_content = CodeBlock(code_block_att, trace_message)
-            # new_content = CodeBlock(["", ["simple_error"], []], trace_message)
+            # new_content = CodeBlock(code_block_att, trace_message)
+            new_content = CodeBlock(["", ["python", "error"], []], trace_message)
 
 
 
