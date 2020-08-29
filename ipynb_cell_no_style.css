@@ -1,0 +1,45 @@
+.new_cell_container {
+	display: flex;
+	padding: 0.4em;
+	border: 1px #d2d2d2 solid;
+}
+
+.new_code_cell {
+	width: 100%;
+}
+
+.new_code_cell > .sourceCode {
+	margin: 0px;
+}
+
+.exec_count {
+	color: #303F9F;
+	font-family: monospace;
+	font-size: 14px;
+	font-weight: 600;
+	min-width: 10ex;
+	padding: 0.4em;
+}
+
+.new_code_cell pre.sourceCode {
+	padding: 0.5em;
+	border: 1px #cfcfcf solid;
+	border-radius: 3px;
+	background: #f7f7f7;
+}
+
+.markdown pre.sourceCode {
+	margin: 1em 2em;
+}
+
+.output > pre {
+	margin: 0;
+}
+
+.output {
+	padding: 0.4em;
+}
+
+.markdown {
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
