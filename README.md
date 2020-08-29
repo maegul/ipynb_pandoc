@@ -3,6 +3,12 @@
 Example usage:
 
 ```shell
+pandoc -s --ipynb-output=best --to html
+    --filter ./ipynb_cell_no_filter.py
+    -c ./ipynb_cell_no_style.css
+    notebook.ipynb -o notebook.html
+
+# to get images and plots, but also crappy error messages (see text below)
 pandoc -s --ipynb-output=all --to html
     --filter ./ipynb_cell_no_filter.py
     -c ./ipynb_cell_no_style.css
@@ -20,7 +26,7 @@ pandoc -s --ipynb-output=all --to html
 * Error Messages
     - At the moment, they are full of ANSI escape sequences that just clog up the HTML for no reason.
     - John McFarlane (pandoc creater) seems to be fixing this: [see GH issue](https://github.com/jgm/pandoc/issues/5633)
-    - In the mean time another filter should be able to get it functional.  But at the moment __this is an arguably prohibitive regression__.
+    - In the mean time, running the command with `--ipynb-output=best` instead of `all` doesn't include ANSI escape sequences.  This also excludes plots.  The filter has been updated to make the error messages passable, but there is no color
 * Performance
     - Check that performance on the hub is worthwhile
     - Some things can be done to improve performance:
