@@ -13,6 +13,12 @@ pandoc -s --ipynb-output=all --to html
     --filter ./ipynb_cell_no_filter.py
     -c ./ipynb_cell_no_style.css
     notebook.ipynb -o notebook.html
+
+# using the lua filter
+pandoc -s
+    --lua-filter=ipynb_cell_no_filter.lua
+    --to html -c ipynb_cell_no_style.css
+    notebook.ipynb -o lua_filter_test.html
 ```
 
 ### Requirements
